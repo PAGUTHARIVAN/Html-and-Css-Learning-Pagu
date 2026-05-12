@@ -1,0 +1,75 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 70px 50px 120px 1fr 70px;
+    grid-template-areas: 
+    "logo logo heading heading heading heading heading heading heading heading heading heading"
+    "menu menu menu menu menu menu menu menu menu menu menu menu"
+    "section1 section1 section1 section1 section2 section2 section2 section2 section3 section3 section3 section3"
+    "content content content content content content content content content content sidebar sidebar"
+    "footer footer footer footer footer footer footer footer footer footer footer footer";
+
+
+}
+
+.logo,
+.heading,
+.menu,
+.section1,
+.section2,
+.section3,
+.content,
+.sidebar,
+.footer {
+    border: 1px solid black;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.logo {
+    background-color: red;
+    grid-area: logo;
+}
+.heading {
+    background-color: green;
+    grid-area: heading;
+}
+.menu {
+    background-color: yellow;
+    grid-area: menu;
+}
+.section1 {
+    background-color: blue;
+    grid-area: section1;
+}
+.section2 {
+    background-color: gray;
+    grid-area: section2;
+}
+.section3 {
+    background-color: palevioletred;
+    grid-area: section3;
+}
+.content {
+    background-color: rgb(106, 252, 142);
+    grid-area: content;
+}
+.sidebar {
+    background-color: rgb(159, 115, 3);
+    grid-area: sidebar;
+}
+.footer {
+    background-color: rgb(12, 16, 253);
+    grid-area: footer;
+}

@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 50% 150% 200% 150% 50%;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        display: grid;
+        grid-template-areas: 
+        "header header"
+        "section1 section2"
+        "main main"
+        "footer footer";
+
+        grid-template-rows: 80% 315% 235% 80%;
+    }
+
+    .header {
+        grid-area: header;
+    }
+    .section1 {
+        grid-area: section1;
+    }
+    .section2 {
+        grid-area: section2;
+    }
+    .main {
+        grid-area: main;
+    }
+    .footer {
+        grid-area: footer;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        display: grid;
+        grid-template-areas: 
+        "header header header header header"
+        "section1 main main main section2"
+        "section1 main main main section2"
+        "footer footer footer footer footer";
+
+        grid-template-columns: 15% 45% 15%; 
+        grid-template-rows: 105% 360% 360% 105%;
+
+    }
+
+    .header {
+        grid-area: header;
+    }
+    .section1 {
+        grid-area: section1;
+    }
+    .main {
+        grid-area: main;
+    }
+    .section2 {
+        grid-area: section2;
+    }
+    .footer {
+        grid-area: footer;
+    }
+
+}
+.header,
+.section1,
+.main,
+.section2,
+.footer {
+    border: 1px solid black;
+
+}
+
+.header {
+    background-color: rgb(103, 103, 255);
+}
+.section1 {
+    background-color: rgb(174, 91, 251);
+}
+.main {
+    background-color: rgb(163, 163, 249);
+}
+.section2 {
+    background-color: rgb(253, 253, 148);
+}
+
+.footer {
+    background-color: rgb(103, 103, 255);
+}

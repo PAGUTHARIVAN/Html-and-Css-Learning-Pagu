@@ -1,0 +1,203 @@
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(coding.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(coding.jpg) no-repeat center center/cover;
+    filter: blur(100px);
+    z-index: -1;
+}
+
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: rgba(0, 0, 0, 0.318);
+    backdrop-filter: blur(10px);
+    padding: 2px 5px;
+    box-shadow: 0 0 100px black;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.289);
+}
+
+.title {
+    color: whitesmoke;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 0 1px 15px black;
+}
+
+.title-second {
+    color: rgb(0, 119, 255);
+}
+
+span .logo {
+    color: rgb(192, 191, 191);
+    width: 50px;
+    height: 50px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav-container .links {
+    display: flex;
+    gap: 10px;
+    margin-right: 20px;
+    padding: 5px 10px;
+}
+
+.nav-container .links li {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.nav-container .links li a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    padding: 8px 8px;
+    border-radius: 20px;
+    color: rgba(255, 255, 255, 0.729);
+    font-weight: normal;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.nav-container .links li a svg {
+    color: rgba(0, 255, 255, 0.493);
+    transition: all 0.2s ease;
+}
+
+.nav-container .links li a:hover svg{
+    color: aqua;
+    text-shadow: 0 0 30px aqua;
+}
+.nav-container .links li a:hover {
+    color: whitesmoke;
+    transform: translateY(-2px);
+    text-shadow: 0 0 30px aqua;
+}
+
+/*card-container*/
+
+.card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+}
+
+.login-card {
+    background-color: rgba(253, 251, 251, 0.092);
+    backdrop-filter: blur(7px);
+    height: 330px;
+    width: 300px;
+    border-radius: 20px;
+    border-top: 1px solid rgba(0, 255, 255, 0.478);
+    box-shadow: 0 2px 100px rgba(0, 0, 0, 0.289);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.login-card .input-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-card .user-logo-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.464);
+}
+.login-card svg {
+    color: rgba(255, 255, 255, 0.533);
+    width: 90px;
+    height: 90px;
+    margin-bottom: 5px;
+}
+
+.login-card .input-fields {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-card .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-card .input-fields input {
+    width: 90%;
+    padding: 8px 10px;
+    border-radius: 1000px;
+    border: none;
+    background-color: rgba(240, 248, 255, 0.362);
+    font-size: 1rem;
+    backdrop-filter: blur(5px);
+    transition: all 0.2s ease;
+}
+
+.input-fields input:focus {
+    appearance: none;
+    box-shadow: none;
+    outline: none;
+    border: 0.5px solid aqua;
+    background-color: rgba(240, 248, 255, 0.688);
+}
+
+.input-fields input::placeholder {
+    color: rgb(98, 98, 98);
+}
+
+.login-card .btn button {
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    background-color: black;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: all ease 0.2s;
+
+}
+
+.login-card .btn button:hover {
+    background-color: aqua;
+    color: black;
+    
+}
+
+.login-card .btn button:active {
+    transform: translateY(-1px);
+    background-color: rgb(1, 171, 171);
+}
